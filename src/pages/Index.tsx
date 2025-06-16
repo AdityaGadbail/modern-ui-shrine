@@ -1,4 +1,3 @@
-
 import { ArrowDown, Github, Linkedin, Mail, ExternalLink, Code, Palette, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -62,12 +61,12 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-violet-50 via-cyan-50 to-pink-50">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-stone-50">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-violet-200/50 shadow-sm">
+      <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-200/50 shadow-sm">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold bg-gradient-to-r from-violet-600 via-cyan-600 to-pink-600 bg-clip-text text-transparent">
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
               Portfolio
             </div>
             <div className="hidden md:flex space-x-8">
@@ -82,7 +81,7 @@ const Index = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20">
+      <section id="home" className="min-h-screen flex items-center justify-center px-6 pt-20 bg-gradient-to-br from-slate-100 via-gray-100 to-zinc-100">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8 relative">
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-violet-400 via-cyan-500 to-pink-500 p-1 animate-pulse shadow-xl">
@@ -126,9 +125,9 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 px-6 bg-white/70">
+      <section id="about" className="py-20 px-6 bg-gradient-to-br from-gray-50 via-slate-50 to-stone-50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 via-cyan-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
             About Me
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -149,12 +148,12 @@ const Index = () => {
               <div className="flex flex-wrap gap-3">
                 {["React", "TypeScript", "Node.js", "Python", "AWS", "MongoDB"].map((tech, index) => {
                   const colors = [
-                    "bg-violet-100 text-violet-700 border-violet-200",
                     "bg-cyan-100 text-cyan-700 border-cyan-200",
+                    "bg-emerald-100 text-emerald-700 border-emerald-200",
+                    "bg-violet-100 text-violet-700 border-violet-200",
                     "bg-pink-100 text-pink-700 border-pink-200",
                     "bg-orange-100 text-orange-700 border-orange-200",
-                    "bg-emerald-100 text-emerald-700 border-emerald-200",
-                    "bg-rose-100 text-rose-700 border-rose-200"
+                    "bg-purple-100 text-purple-700 border-purple-200"
                   ];
                   return (
                     <span key={tech} className={`px-3 py-1 rounded-full text-sm border font-medium ${colors[index % colors.length]}`}>
@@ -165,7 +164,7 @@ const Index = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="w-full h-96 rounded-2xl bg-gradient-to-br from-violet-100 via-cyan-100 to-pink-100 backdrop-blur-sm border border-violet-200 p-8 flex items-center justify-center shadow-lg">
+              <div className="w-full h-96 rounded-2xl bg-gradient-to-br from-slate-200 via-gray-200 to-zinc-200 backdrop-blur-sm border border-slate-300 p-8 flex items-center justify-center shadow-lg">
                 <div className="text-center">
                   <div className="text-6xl mb-4">👨‍💻</div>
                   <p className="text-slate-600 font-medium">Your photo here</p>
@@ -177,14 +176,14 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="py-20 px-6">
+      <section id="skills" className="py-20 px-6 bg-gradient-to-br from-stone-50 via-slate-50 to-gray-50">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 via-cyan-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
             Skills & Expertise
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {skills.map((skill, index) => (
-              <Card key={index} className="bg-white/90 border-violet-200 backdrop-blur-sm hover:bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
+              <Card key={index} className="bg-white/90 border-slate-200 backdrop-blur-sm hover:bg-white hover:shadow-lg transition-all duration-300 hover:scale-105">
                 <CardHeader className="text-center">
                   <div className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-gradient-to-r ${skill.color} flex items-center justify-center`}>
                     <skill.icon className="w-6 h-6 text-white" />
@@ -207,14 +206,14 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-6 bg-white/70">
+      <section id="projects" className="py-20 px-6 bg-gradient-to-br from-slate-100 via-zinc-100 to-stone-100">
         <div className="container mx-auto max-w-6xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 via-cyan-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
             Featured Projects
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="bg-white/95 border-violet-200 backdrop-blur-sm hover:bg-white hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
+              <Card key={index} className="bg-white/95 border-slate-200 backdrop-blur-sm hover:bg-white hover:shadow-xl transition-all duration-300 hover:scale-105 overflow-hidden">
                 <div className="aspect-video relative overflow-hidden">
                   <img 
                     src={project.image} 
@@ -233,10 +232,12 @@ const Index = () => {
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag, tagIndex) => {
                       const tagColors = [
+                        "bg-cyan-100 text-cyan-700 border-cyan-200",
+                        "bg-emerald-100 text-emerald-700 border-emerald-200",
                         "bg-violet-100 text-violet-700 border-violet-200",
                         "bg-pink-100 text-pink-700 border-pink-200",
                         "bg-orange-100 text-orange-700 border-orange-200",
-                        "bg-cyan-100 text-cyan-700 border-cyan-200"
+                        "bg-purple-100 text-purple-700 border-purple-200"
                       ];
                       return (
                         <span key={tag} className={`px-2 py-1 rounded text-xs border font-medium ${tagColors[tagIndex % tagColors.length]}`}>
@@ -263,9 +264,9 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 px-6">
+      <section id="contact" className="py-20 px-6 bg-gradient-to-br from-gray-50 via-slate-50 to-zinc-50">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-violet-600 via-cyan-600 to-pink-600 bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 bg-gradient-to-r from-cyan-600 via-emerald-600 to-teal-600 bg-clip-text text-transparent">
             Get In Touch
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -279,26 +280,26 @@ const Index = () => {
               </p>
               <div className="space-y-4">
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500 to-emerald-600 flex items-center justify-center">
                     <Mail className="text-white" size={16} />
                   </div>
                   <span className="text-slate-600">john.doe@example.com</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-pink-500 to-rose-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-violet-500 to-purple-600 flex items-center justify-center">
                     <Github className="text-white" size={16} />
                   </div>
                   <span className="text-slate-600">github.com/johndoe</span>
                 </div>
                 <div className="flex items-center space-x-4">
-                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-orange-500 to-amber-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-pink-500 to-rose-600 flex items-center justify-center">
                     <Linkedin className="text-white" size={16} />
                   </div>
                   <span className="text-slate-600">linkedin.com/in/johndoe</span>
                 </div>
               </div>
             </div>
-            <Card className="bg-white/95 border-violet-200 backdrop-blur-sm shadow-lg">
+            <Card className="bg-white/95 border-slate-200 backdrop-blur-sm shadow-lg">
               <CardHeader>
                 <CardTitle className="text-slate-800">Send me a message</CardTitle>
               </CardHeader>
@@ -349,7 +350,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-6 border-t border-violet-200 bg-white/80">
+      <footer className="py-8 px-6 border-t border-slate-200 bg-gradient-to-r from-gray-100 via-slate-100 to-zinc-100">
         <div className="container mx-auto text-center">
           <p className="text-slate-600">
             © 2024 John Doe. Built with React and Tailwind CSS.
